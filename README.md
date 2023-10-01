@@ -12,10 +12,10 @@ El manual completo esta en `info gdb`
   - `U`: [Unidad](#unidad)
 - `p`: Evalua expresión. Usa el formato `/F`
   - `F`: [Formato](#formato)
-- `b`: Setear breakpoint
 - `c`: Continue
-- `delete breakpoints <indice>`
 - `si`: "step instruction"
+- `b`: Setear breakpoint
+- `delete breakpoints <indice>`
 
 ### Dashboard
 
@@ -34,7 +34,7 @@ De la sección 10.5 "Output formats" en `info gdb`
 - `d`: Decimal
 - `u`: Decimal sin signo
 - `t`: Binario (*t*wo's complement)
-- `a`: Dirección (Te muestra el label mas cercano)
+- `a`: Dirección (Muestra un offset al label mas cercano)
 - `f`: Floating point
 - `s`: Null-terminated string
 
@@ -91,9 +91,11 @@ Bad_Black_RGBA: dw 0x000000FF
 > `> x/4b &Good_Black_RGBA`
 > 
 > `0x..0 <Good_Black_RGBA>: 0, 0, 0, 0xFF`
-> 
+
+El canal alfa está al máximo, el resto en 0
+
 > `> x/4b &Bad_Black_RGBA`
 > 
 > `0x..0 <Bad_Black_RGBA>: 0xFF, 0, 0, 0`
 
-El canal rojo está al max!
+El canal **rojo** está al máximo, el alfa en 0!
