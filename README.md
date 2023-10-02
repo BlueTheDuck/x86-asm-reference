@@ -51,6 +51,31 @@ De la sección 10.6 "Examining Memory"
 
 ## SIMD
 
+Los registros `xmm0` a `xmm15` se usan para las instrucciones Single Instruction Multiple Data y miden 16 bytes / 128 bits
+
+### Nomentclatura
+
+#### Tamaños
+- `b`: byte
+- `w`: word (2 bytes)
+- `d`: double word, dword (4 bytes)
+- `q`: quad word, qword (8 bytes)
+- `dq`: double quad word (16 bytes) [^double-quad-word-size]
+- `ss`: [scalar](#valores-en-registros-simd) single precision, single (float 32 bits)
+- `sd`: [scalar](#valores-en-registros-simd) double precision, double (float 64 bits)
+
+[^double-quad-word-size]: 128 bits, todo un registro XMM
+
+#### Valores en registros SIMD
+- Scalar: Un valor en el registro, los bits no usados en 0
+- Packed: Varios valores en un registro
+
+#### Alineamiento
+- `a`: Aligned. Alineamiento a 16 bytes [^alineamiento-hint]
+- `u`: Unaligned
+
+[^alineamiento-hint]: El byte de las unidades es cero, ej: `0x1230` 
+
 ### Instrucciones
 
 ### Snippets
