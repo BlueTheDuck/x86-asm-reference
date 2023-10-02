@@ -78,6 +78,35 @@ Los registros `xmm0` a `xmm15` se usan para las instrucciones Single Instruction
 
 ### Instrucciones
 
+#### Movimiento
+
+##### Load/Store
+
+Estas instrucciones pueden cargar y guardar desde/hacia la memoria
+
+| Tamaño                               | Aligned | Unaligned | Scalar |
+| ------------------------------------ | ------- | --------- | ------ |
+| double qword[^double-quad-word-size] | MOVDQA  | MOVDQU    |        |
+| single                               | MOVAPS  | MOVUPS    | MOVSS  |
+| double                               | MOVAPD  | MOVUPD    | MOVSD  |
+| dword                                |         |           | MOVD   |
+| qword                                |         |           | MOVQ   |
+
+##### Mover empaquetado con extensión
+
+Estas instrucciones pueden cargar desde la memoria (load), pero **no** pueden guardar (store)
+
+| Tamaño     | Sing extend | Zero extend |
+| ---------- | ----------- | ----------- |
+| byte→word  | `PMOVSXBW`  | `PMOVZXBW`  |
+| byte→dword | `PMOVSXBD`  | `PMOVZXBD`  |
+| byte→quad  | `PMOVSXBQ`  | `PMOVZXBQ`  |
+| word→dword | `PMOVSXWD`  | `PMOVZXWD`  |
+| word→quad  | `PMOVSXWQ`  | `PMOVZXWQ`  |
+| dword→quad | `PMOVSXDQ`  | `PMOVZXDQ`  |
+
+
+
 ### Snippets
 
 #### Complemento a dos:
