@@ -70,7 +70,7 @@ neg: ; Parametro y ret por xmm0
 
 ```asm
 neg: ; Parametro y ret por xmm0
-    pcmpeqd xmm1, xmm1  ; xmm1 := (-1) (ó 0b1111...)
+    pcmpeqd xmm1, xmm1  ; xmm1 := (-1) (o 0b1111...)
     pxor    xmm0, xmm1  ; xmm0 := xmm0 ⊻ 0b1111...
     ret
 ```
