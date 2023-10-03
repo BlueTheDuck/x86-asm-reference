@@ -108,6 +108,13 @@ Estas instrucciones pueden cargar desde la memoria (load), pero **no** pueden gu
 | word→quad  | `PMOVSXWQ`  | `PMOVZXWQ`  |
 | dword→quad | `PMOVSXDQ`  | `PMOVZXDQ`  |
 
+##### Insert/Extract
+
+Estas instrucciones toman un registro xmm0 y un indice. Intepretando el registro como un array, extraen el valor desde esa posición y lo guardan un registro de destino.
+
+PEXTRB
+------
+![PEXTRB ex](assets/pextrb.svg)
 
 #### Conversiones
 
