@@ -16,6 +16,9 @@ El manual completo esta en `info gdb`
 - `si`: "step instruction"
 - `b`: Setear breakpoint
 - `delete breakpoints <indice>`
+- `!<sh>` ejecuta el comando `<sh>` en la terminal
+  - `!make` ejecuta `make`
+  - `!make clean` ejecuta `make clean`
 
 ### Dashboard
 
@@ -106,6 +109,11 @@ Estas instrucciones pueden cargar desde la memoria (load), pero **no** pueden gu
 | dword→quad | `PMOVSXDQ`  | `PMOVZXDQ`  |
 
 
+#### Conversiones
+
+#### Operaciones aritmeticas
+
+#### Comparaciones
 
 ### Snippets
 
